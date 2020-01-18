@@ -26,8 +26,39 @@ mongoose.connect(MONGODB_URI);
 
 
 
+app.get("/scrape", function(req, res) {
+    axios.get("https://www.seattletimes.com/").then(function(response) {
+        let $ = cheerio.load(response.data);
+
+        console.log($);
+        console.log(response);
+
+        $("li").each(function(i, element) {
+            let result = {};
+
+            result.title = $(this)
+                .children("a")
+                .text();
+            result.link = $(this)
+                .children("a")
+                .attr("href");
+
+            
+            db.Article.create(result)
+                .then(function(dbArticle) {
+                    console.log(dbArticle);
+                })
+                .catch(function(err) {
+                    console.log(err);
+                });
+        });
+        res.send("Scrape Complete");
+    });
+});
 
 
 app.listen(PORT, function() {
     console.log("App running on port " + PORT + "!");
-  });
+});
+
+

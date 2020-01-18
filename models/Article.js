@@ -6,15 +6,15 @@ let ArticleSchema = new Schema({
 
     headline: {
         type: String,
-        required: true
+        // required: true
     },
     summary: {
         type: String,
-        required: true
+        // required: true
     },
     link: {
         type: String,
-        required: true
+        // required: true
     },
     comment: {
         type: Schema.Types.ObjectId,
