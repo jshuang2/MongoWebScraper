@@ -7,14 +7,17 @@ let ArticleSchema = new Schema({
     headline: {
         type: String,
         // required: true
+        unique: true
     },
     summary: {
         type: String,
         // required: true
+        unique: true
     },
     link: {
         type: String,
         // required: true
+        unique: true
     },
     comment: {
         type: Schema.Types.ObjectId,
