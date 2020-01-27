@@ -11,6 +11,9 @@
 
 .formContainer {
     line-height: 2;
+    padding-top: 0;
+    padding-left: 1.25rem;
+    padding-bottom: 1.25rem;
 }
 
 .article-container {
@@ -23,5 +26,5 @@
 }
 
 .card-header {
-    
+    background-color: #222;
 }

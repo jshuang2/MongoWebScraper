@@ -46,8 +46,9 @@ $(document).ready(function() {
         let cardBody = $("<div class='card-body'>").append($("<h5 class='card-title'>").text(article.headline),
         $("<p class='card-text'>").text(article.summary),
         $("<a class='btn btn-primary'>").attr("href", article.link).text("Go to article"))
+        let commentBox = $("<div class='formContainer'>").append($("<input class='myForm'>").attr("rows", "2").attr("placeholder", "Leave a comment"));
 
-        card.append(cardHeader, cardBody);
+        card.append(cardHeader, cardBody, commentBox);
 
         return card;
     };
@@ -55,17 +56,17 @@ $(document).ready(function() {
 
 
 
-    $.getJSON("/articles", function(data) {
+    // $.getJSON("/articles", function(data) {
     
-        console.log("This is data " + data);
-        for (let i = 0; i < data.length; i++) {
-            console.log("This is data[i] " + data[i]);
+    //     console.log("This is data " + data);
+    //     for (let i = 0; i < data.length; i++) {
+    //         console.log("This is data[i] " + data[i]);
     
             
             
-            $(".articles").append("<p data-id='" + JSON.stringify(data[i]._id) + "'>" + JSON.stringify(data[i].headline) + "<br />" + JSON.stringify(data[i].link) + "</p>");
-        };
-    });
+    //         $(".articles").append("<p data-id='" + JSON.stringify(data[i]._id) + "'>" + JSON.stringify(data[i].headline) + "<br />" + JSON.stringify(data[i].link) + "</p>");
+    //     };
+    // });
 
 
 

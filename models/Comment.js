@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 let CommentSchema = new Schema({
-    title: String,
-    body: {
-        type: String,
+    comments: [{
+        body: String,
+        date: Date
+    }]
         // required: true
-    }
 });
 
 const Comment = mongoose.model("Comment", CommentSchema);
