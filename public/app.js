@@ -42,13 +42,13 @@ $(document).ready(function() {
 
     function createCard(article) {
         let card = $("<div class='card'>");
-        let cardHeader = $("<div class='card-header'>");
+        // let cardHeader = $("<div class='card-header'>");
         let cardBody = $("<div class='card-body'>").append($("<h5 class='card-title'>").text(article.headline),
         $("<p class='card-text'>").text(article.summary),
         $("<a class='btn btn-primary'>").attr("href", article.link).text("Go to article"))
         let commentBox = $("<div class='formContainer'>").append($("<input class='myForm'>").attr("rows", "2").attr("placeholder", "Leave a comment"));
 
-        card.append(cardHeader, cardBody, commentBox);
+        card.append(cardBody, commentBox);
 
         return card;
     };
