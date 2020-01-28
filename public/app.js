@@ -36,7 +36,7 @@ $(document).ready(function() {
             articleCards.push(createCard(articles[i]));
         }
 
-        articleContainer.append(articleCards);
+        articleContainer.prepend(articleCards);
 
     };
 
