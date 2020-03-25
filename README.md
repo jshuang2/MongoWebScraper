@@ -14,7 +14,7 @@ View the deployed application at: <b><a href="https://mongo-web-scraper-project.
 
 ## Project Status
 
-As of now, this project is incomplete. Scraping functionality works correctly but is not set up to be done via user input yet. Comments do not work yet either.
+As of now, this project is **incomplete**. Scraping functionality works correctly but is not set up to be done via user input yet. Comments do not work yet either.
 
 ![MongoWebScraper-screenshot](https://user-images.githubusercontent.com/52802240/77594359-95398e80-6eb3-11ea-8b26-a46fecf546b4.PNG)
 
@@ -45,4 +45,6 @@ To Visit App:
 At the end of the day, the codebase and file structure for this project is not efficient and could be improved upon. I really like the idea of web scraping so I'm ready to tackle this project again with a React based file structure.
 
 In the future, I plan on completely restructuring this project as a full-scale MERN stack application. I feel this project would greatly benefit from a React based front end because there are components that could easily be abstracted away from each other. 
+
+View the deployed application at: <b><a href="https://mongo-web-scraper-project.herokuapp.com/" target="_blank">https://mongo-web-scraper-project.herokuapp.com/</a></b>
 
